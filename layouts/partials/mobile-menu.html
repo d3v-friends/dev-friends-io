@@ -1,0 +1,17 @@
+<ul class="menu menu--mobile">
+    <li class="menu__trigger">Menu&nbsp;▾</li>
+    <li>
+        <ul class="menu__dropdown">
+            {{ range $.Site.Menus.main }}
+                {{ if not .HasChildren }}
+                    <li class="menu__dropdown__title"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ else }}
+                    <li class="menu__dropdown__title">{{ .Name }}</li>
+                    {{ range .Children }}
+                        <li class="menu__dropdown__content"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </ul>
+    </li>
+</ul>

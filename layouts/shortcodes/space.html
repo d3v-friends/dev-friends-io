@@ -1,0 +1,4 @@
+{{ if .Get "style" }}
+<div {{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }}></div>
+{{ end }}
+

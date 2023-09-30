@@ -1,0 +1,145 @@
+baseURL: "/"
+languageCode: en-us
+paginate: 5
+enableEmoji: true
+enableRobotsTXT: true
+uglyURLs: true
+output: [ "HTML" ]
+#canonifyURLs: false
+
+module:
+  hugoVersion:
+    extended: true
+
+params:
+  themeColor: "green"
+  showLanguageSelector: false
+  showMenuItems: 6
+  fullWidthTheme: true
+  centerTheme: true
+  autoCover: true
+  oneHeadingSize: false
+  readingTime: false
+  #  contentTypeName: "posts"
+  #  favicon: favicon.ico
+  updatedDatePrefix: Updated
+
+
+languages:
+  en:
+    title: "DevFriends"
+    copyright: 'Ciao Lee'
+    params:
+      subtitle: 'DevFriends'
+      menuMore: Show more
+      readMore: Read more
+      readOtherPosts: Read other posts
+      logo:
+        logoText: DevFriends
+        logoHomeLink: /index.html
+
+    menu:
+      main:
+        # Resume Section
+        - identifier: careers
+          name: Careers
+          url: /careers.html
+          weight: 1
+        # Language Section
+        - identifier: languages
+          name: Languages
+          pageRef: /languages
+          url: /languages.html
+          weight: 2
+        - identifier: cpp
+          parent: languages
+          name: C++
+          url: /languages/cpp.html
+        - identifier: go
+          parent: languages
+          name: Go
+          url: /languages/go.html
+        - identifier: typescript
+          parent: languages
+          name: TS
+          url: /languages/ts.html
+
+        # Project Section
+        - identifier: projects
+          name: Projects
+          weight: 3
+        - identifier: mango
+          parent: projects
+          name: Mango
+          url: /projects/mango.html
+        - identifier: gosql
+          parent: projects
+          name: GoSQL
+          url: /projects/gosql.html
+
+        # Unreal engine Section
+        - identifier: ue5
+          name: UE5
+          url: /ue5.html
+          weight: 4
+
+
+
+        # Book Section
+        - identifier: books
+          name: Books
+          weight: 5
+        - identifier: unreal-textbook
+          parent: books
+          name: 인생 언리얼 교과서
+          url: /books/unreal-textbook.html
+        - identifier: game-math
+          parent: books
+          name: 게임 수학 (작성중)
+          url: /books/game-math.html
+        - identifier: start-microservices
+          parent: books
+          name: 마이크로서비스
+          url: /books/start-microservice.html
+#        - identifier: start-blender
+#          parent: books
+#          name: 블렌더 (작성중)
+#          url: /books/start-blender.html
+        - identifier: modern-cpp
+          parent: books
+          name: 모던 C++ (작성중)
+          url: /books/modern-cpp.html
+
+        # Shorts Section
+        - identifier: shorts
+          name: Shorts
+          url: /shorts.html
+          weight: 6
+
+        # Toys Section
+        - identifier: toys
+          name: Toys
+          url: /toys.html
+          weight: 7
+
+        # ETC
+        - identifier: lives
+          name: Lives
+          url: /lives.html
+          weight: 8
+        - identifier: orthodontics
+          parent: lives
+          name: 치아교정 이야기
+          url: /lives/orthodontics.html
+
+
+        - identifier: licenses
+          name: Licenses
+          url: /licenses.html
+          weight: 9
+
+
+deployment:
+  matchers:
+    pattern: "^.+\\.(html|xml|json)$"
+    gzip: true

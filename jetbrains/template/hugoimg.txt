@@ -1,0 +1,4 @@
+{{< image src="/img/$NAME$.png"
+alt="$NAME$"
+position="left"
+style="" >}}

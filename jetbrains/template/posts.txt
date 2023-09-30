@@ -1,0 +1,17 @@
+---
+title: "${NAME}"
+description: "${NAME}"
+author: "Ciao Lee"
+date: "${YEAR}-${MONTH}-${DAY}"
+showFullContent: false
+readingTime: false
+hideComments: false
+cover: ""
+keywords:
+  - "tmp"
+tags:
+  - "tmp"
+---
+
+
+# ${NAME}

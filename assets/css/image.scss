@@ -1,0 +1,12 @@
+.hugo_image {
+  border-radius: 5px;
+  width: 600px;
+
+  @media ($phone) {
+    width: 100%;
+  }
+
+  @media ($tablet) {
+    width: 100%;
+  }
+}

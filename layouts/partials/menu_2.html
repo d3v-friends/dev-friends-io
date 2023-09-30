@@ -1,0 +1,53 @@
+<script>
+    window.addEventListener("click", ev => {
+        if (ev.target.className !== "nav-title") {
+            OnCloseAll();
+        }
+    })
+
+    function OnCloseAll(exceptId) {
+        const ls = document.getElementsByClassName("nav-content");
+        for (let i = 0; i < ls.length; i++) {
+            const item = ls.item(i);
+            if (exceptId && exceptId === item.id) continue
+            item.style.display = "none";
+        }
+    }
+
+    function OnClickTitle(id) {
+        // 다른 드롭박스 모두 닫기
+        OnCloseAll(id);
+
+        const content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+
+    function OnClickNav(link) {
+        location.href = link;
+    }
+</script>
+
+<div class="top-nav">
+    {{ range $.Site.Menus.main }}
+        {{ if .HasChildren }}
+            <div class="nav-item">
+                <div class="nav-title" onclick="OnClickTitle('{{ .Identifier }}')">{{ .Name }}</div>
+                <div id="{{ .Identifier }}" class="nav-content">
+                    {{ range .Children }}
+                        <div class="nav-link" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>
+                    {{ end }}
+                </div>
+            </div>
+        {{ else }}
+            <div class="nav-item">
+                <div class="nav-title" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>
+            </div>
+        {{ end }}
+
+    {{ end }}
+
+</div>

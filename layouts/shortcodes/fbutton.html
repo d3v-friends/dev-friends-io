@@ -1,0 +1,5 @@
+{{ if .Get "href" }}
+    <a class="hugo_button {{ .Get "style" }}" href="{{ .Get "href" | safeURL }}">{{ .Get "name" }}</a>
+{{ end }}
+
+

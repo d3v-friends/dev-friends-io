@@ -1,0 +1,49 @@
+.top-nav {
+  @media ($phone) {
+    display: none;
+  }
+
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0 5px 0;
+  justify-content: flex-start;
+  align-items: center;
+
+  .nav-item {
+    position: relative;
+    margin-right: 20px;
+    font-weight: 500;
+
+    .nav-title {
+      font-size: 1.6rem;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .nav-content {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 40px;
+      padding: 5px 15px 5px 15px;
+      left: 0;
+      min-width: 180px;
+      background: #21232b;
+      border: 2px solid white;
+      display: none;
+      z-index: 100;
+
+
+      .nav-link {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+
+

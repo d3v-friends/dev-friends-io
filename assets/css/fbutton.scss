@@ -1,0 +1,43 @@
+.hugo_button {
+  margin: 20px 0 20px 0;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px 0 10px 0;
+  text-decoration: none;
+
+  &.next {
+    border: 1px $accent solid;
+
+    &:hover {
+      background: $accent;
+      color: black;
+    }
+  }
+
+  &.prev {
+    color: #bababa;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  &.alone {
+    border: 1px solid #bababa;
+    color: #bababa;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+}
+
+
+
+.hugo_prev {
+
+}
