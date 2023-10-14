@@ -12,40 +12,39 @@ date: "2023-06-25"
 
 {{< space style="height: 30px;" >}}
 
-## Learning UE5
+## Main language
 
-~~~mermaid
-gantt
-    title Learning UE5
-    dateFormat YY-MM-DD
-    section Basic
-        GameMath: b1, 23-07-20, 2w
-    section Lecture in YouTube
-        CityBuilders: l1, after b1, 2w
-        RTSGames: after l1, 2w
-~~~
+### GO
 
-* 기초
-    1. 이득우의 게임수학 책 1독  
-       {{< space style="height: 20px;" >}}
-* 유튜브 강의
-    1. City Builders: Blueprint 기본으로 진행하나, C++ 코드로 작성하는 법을 공부하면서 진행한다
-    2. RTS Games: 강의는 찾았지만, 아직 내용 파악은 전무. 추후 개발일지 업데이트 예정
+> 주력 언어. 회사에서 주력으로 사용하고 있다. 단순화한 문법형식과 명시적 포인터 정의 등 기초에 충실하면서 속도가 빠른 프로그램 개발을 쉽게 할 수 있어, 개인적으로 제일 좋아하는 언어이다.
+
+### Typescript(TS, JS)
+
+> 프론트, 백엔드 등 광범위하고 범용적인 프로그래밍 언어. 비선호 언어이지만 개발에 필요에 의해서 한다. 고급 프로그래밍으로 접근시 진입장벽이 너무 높다. (리엑트, 앵귤러 등)
+
+### C++ (17, 20)
+
+> Unreal Engine 사용을 위한 언어. 저수준언어라서 제일 좋아한다. 최근 공부하기 시작했고, 조금 더 익숙해지면 주력으로 쓰고 싶다.
+
+
 
 {{< space style="height: 40px;" >}}
-    
----
 
-## Backend Utils
 
-### Mango
+## Projects
 
-* MongoDriver Utilities
+* 개발, 사용 중인 개인 개발 라이브러리
 
-### GoSQL
-
-* MySQL ORM Library
+| project_nm       | content                                  | repository_link                                                     |
+|------------------|------------------------------------------|---------------------------------------------------------------------|
+| mango            | official mongo driver utility            | [mango](https://github.com/d3v-friends/mango)                       |
+| gosql            | mysql orm library (not working at not)   | [gosql](https://github.com/d3v-friends/gosql)                       |
+| go-pure          | pure go code for helping writing code    | [go-pure](https://github.com/d3v-friends/go-pure)                   |
+| go-grpc          | grpc code (proto) generator helper       | [go-grpc](https://github.com/d3v-friends/go-grpc)                   |
+| ms-accounts-grpc | microservice for managing account        | [ms-accounts-grpc](https://github.com/d3v-friends/ms-accounts-grpc) |
+| ms-points-grpc   | microservice for managing point          | [ms-points-grpc](https://github.com/d3v-friends/ms-points-grpc)     |
+| react-stater     | react base without CRA(create react app) | [react-starter](https://github.com/d3v-friends/react-starter)       |
 
 {{< space style="height: 40px;" >}}
-    
+
 ---

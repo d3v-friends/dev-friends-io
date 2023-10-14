@@ -41,10 +41,10 @@ languages:
     menu:
       main:
         # Resume Section
-        - identifier: careers
-          name: Careers
-          url: /careers.html
-          weight: 1
+#        - identifier: careers
+#          name: Careers
+#          url: /careers.html
+#          weight: 1
         # Language Section
         - identifier: languages
           name: Languages
@@ -68,20 +68,25 @@ languages:
         - identifier: projects
           name: Projects
           weight: 3
-        - identifier: mango
-          parent: projects
-          name: Mango
-          url: /projects/mango.html
-        - identifier: gosql
-          parent: projects
-          name: GoSQL
-          url: /projects/gosql.html
+          url: /projects.html
+#        - identifier: mango
+#          parent: projects
+#          name: Mango
+#          url: /projects/mango.html
+#        - identifier: gosql
+#          parent: projects
+#          name: GoSQL
+#          url: /projects/gosql.html
 
         # Unreal engine Section
         - identifier: ue5
           name: UE5
           url: /ue5.html
           weight: 4
+        - identifier: able_project
+          parent: ue5
+          name: able_project
+          url: /ue5/able-project.html
 
 
 
