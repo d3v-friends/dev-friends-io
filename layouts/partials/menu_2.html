@@ -34,14 +34,21 @@
 <div class="top-nav">
     {{ range $.Site.Menus.main }}
         {{ if .HasChildren }}
-            <div class="nav-item">
-                <div class="nav-title" onclick="OnClickTitle('{{ .Identifier }}')">{{ .Name }}</div>
-                <div id="{{ .Identifier }}" class="nav-content">
-                    {{ range .Children }}
-                        <div class="nav-link" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>
-                    {{ end }}
-                </div>
-            </div>
+                {{ if .URL}}
+                    <div class="nav-item">
+                        <div class="nav-title" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>
+                    </div>
+                {{ else }}
+                    <div class="nav-item">
+                        <div class="nav-title" onclick="OnClickTitle('{{ .Identifier }}')">{{ .Name }}</div>
+                        <div id="{{ .Identifier }}" class="nav-content">
+                            {{ range .Children }}
+                            <div class="nav-link" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+
         {{ else }}
             <div class="nav-item">
                 <div class="nav-title" onclick="OnClickNav('{{ .URL }}')">{{ .Name }}</div>

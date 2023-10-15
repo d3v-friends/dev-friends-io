@@ -27,15 +27,15 @@ params:
 
 languages:
   en:
-    title: "DevFriends"
+    title: "dev_friends"
     copyright: 'Ciao Lee'
     params:
-      subtitle: 'DevFriends'
+      subtitle: 'dev_friends'
       menuMore: Show more
       readMore: Read more
       readOtherPosts: Read other posts
       logo:
-        logoText: DevFriends
+        logoText: dev_friends
         logoHomeLink: /index.html
 
     menu:
@@ -83,10 +83,10 @@ languages:
           name: UE5
           url: /ue5.html
           weight: 4
-        - identifier: able_project
-          parent: ue5
-          name: able_project
-          url: /ue5/able-project.html
+#        - identifier: able_project
+#          parent: ue5
+#          name: able_project
+#          url: /ue5/able-project.html
 
 
 
@@ -130,7 +130,6 @@ languages:
         # ETC
         - identifier: lives
           name: Lives
-          url: /lives.html
           weight: 8
         - identifier: orthodontics
           parent: lives
