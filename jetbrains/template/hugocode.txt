@@ -1,3 +1,0 @@
-{{< code language="$LANGUAGE$" expand="펼치기" collapse="접기" isCollapsed="false" >}}
-
-{{< /code >}}
