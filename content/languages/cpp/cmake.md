@@ -45,3 +45,31 @@ add_subdirectory(lib)
 # add_executable( [NAME] [FILE PATH] )
 add_executable(HelloWorld sources/hello.cpp)
 ~~~
+
+## Windows 에서 WSL (Windows subsystem linux) 로 개발하기
+
+~~~powershell
+wsl
+~~~
+
+~~~bash
+# cpp build, package manager
+sudo apt-get install cmake
+
+# LLVM gcc compiler
+sudo apt-get install clang
+
+# debugger
+sudo apt-get install gdb
+~~~
+
+3. CLion 설정하기
+
+- Build, Execution, Deployment > Toolchains 메뉴로 가기
+- (+) 버튼 눌러서 WSL 추가
+- 모두 자동 검색되어 찾아지면 확인 눌러 저장하기
+
+{{< image src="/img/cpp/clion_preference.png"
+alt="cpp/clion_preference"
+position="left"
+style="" >}}
